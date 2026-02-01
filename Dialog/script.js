@@ -1,4 +1,4 @@
-{
+* {
   box-sizing: border-box;
 }
 
@@ -70,4 +70,5 @@ button {
   font-weight: bold;
   cursor: pointer;
 }
+
 
