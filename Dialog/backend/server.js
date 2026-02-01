@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const Message = require("./models/Message");
 
-const app = express();
+const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
@@ -43,6 +43,8 @@ app.get("/api/messages/:user1/:user2", async (req, res) => {
   res.json(messages);
 });
 
-app.listen(3000, () => {
-  console.log("Dialog backend running on http://localhost:3000");
+app.listen(PORT, () => {
+  console.log(`Dialog backend running on port ${PORT}`);
 });
+
+
